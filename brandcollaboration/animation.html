@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <p class="scroll-animation">This text will slide up when you scroll.</p>
+        <p class="scroll-animation">Another piece of text that will slide up.</p>
+    </div>
+    
+</body>
+<style>
+    /* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    height: 2000px; /* to create enough space for scrolling */
+}
+
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animation.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+</style>
+<script>
+    // script.js
+
+document.addEventListener("DOMContentLoaded", function() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    });
+
+    const elements = document.querySelectorAll('.scroll-animation');
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+});
+
+</script>
+</html>

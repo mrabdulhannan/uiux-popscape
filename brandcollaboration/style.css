@@ -1,0 +1,208 @@
+/* Button Styles */
+
+a.button-p {
+  background-color: #fe5da0;
+  padding: 15px 40px;
+  border-radius: 30px;
+  color: #fff;
+  font-family: Hanuman;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.colored-line {
+  border: 0;
+  height: 2px; /* Adjust the height as needed */
+  background-color: #fe5da0;
+  width: 100%; /* Adjust the width as needed */
+}
+
+/* First Section */
+.central-text {
+  font-family: "Hanuman";
+}
+
+section.first-section {
+  padding-top: 100px;
+  width: 700px;
+  text-align: center;
+}
+
+h2.page-heading {
+  font-size: 72px;
+  line-height: 0;
+  font-weight: 600;
+  margin: 30px 0 50px 0;
+}
+
+p.page-subheading {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* Second Section */
+.outer-wrapper {
+  display: flex;
+  padding: 0 140px;
+}
+
+.outer-wrapper .content {
+  padding-top: 25px;
+  padding-right: 50px;
+}
+
+.flex-fifty {
+  width: 50%;
+}
+
+.circle-image {
+  position: absolute;
+  z-index: -1;
+  top: 320px;
+  right: 580px;
+}
+
+section.second-section {
+  padding-top: 100px;
+}
+
+.client-image img {
+  float: right;
+}
+
+h2.section-heading {
+  font-size: 40px;
+  font-weight: 600;
+  font-family: Hanuman;
+}
+
+.page-width {
+  max-width: 1600px;
+  margin: auto;
+}
+
+/* Third Section */
+
+.third-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 140px;
+}
+
+.second-image {
+  z-index: -1;
+}
+
+.first-image {
+  margin-right: -46px;
+  margin-top: 200px;
+}
+
+.third-image {
+  margin-left: -20px;
+  margin-top: 140px;
+}
+
+.third-text-section {
+  text-align: center;
+}
+
+.text-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+p.large-subheading {
+  font-size: 26px;
+  font-family: Hanuman;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-top: 50px;
+}
+
+.bottom-border img {
+  width: 100%;
+}
+
+/* Fourth Section */
+.fourth-section .image-div.flex-fifty {
+  text-align: right;
+}
+
+.fourth-section .image-div.flex-fifty img {
+  height: 100%;
+}
+.fourth-section {
+  padding-top: 130px;
+}
+
+.fourth-section .content.flex-fifty {
+  margin: 50px 0;
+  padding: 20px 30px 20px 50px;
+}
+
+.fourth-section .content.flex-fifty {
+  background-color: #7b0087;
+  color: #fff;
+  border-radius: 0 15px 15px 0;
+}
+
+.fourth-section p.large-subheading {
+  margin: 0;
+}
+
+.fourth-section h2.section-heading {
+  margin: 0;
+  margin-top: 40px;
+}
+
+.fourth-section p.page-subheading {
+  margin: 0;
+  margin-top: 20px;
+}
+
+.fourth-section .button-div {
+  margin-top: 50px;
+  padding-bottom: 70px;
+}
+
+/* Fifth Section */
+
+section.fifth-section.page-width {
+  margin-top: 120px;
+}
+
+.fifth-section .content.flex-fifty {
+  color: #000;
+  background: linear-gradient(to top, #fcdeff, #fff);
+  /* background-color: #fe5da0; */
+}
+
+.fifth-section p.large-subheading {
+  padding-top: 0;
+}
+
+.fifth-section .outer-wrapper .content {
+  padding-top: 0;
+}
+
+.fifth-section .image-div.flex-fifty {
+  width: 40%;
+  z-index: 1;
+  margin: 60px 0;
+}
+
+.fifth-section .content.flex-fifty {
+  width: 60%;
+  margin-left: -40px;
+  border-radius: 15px;
+  padding: 70px 100px;
+}
+
+
+.image-gallery {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+}
