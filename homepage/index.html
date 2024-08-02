@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+  <div class="home-page page-color">
+    <section class="container">
+      <div class="main-banner-outer-wrap">
+        <div class="main-banner parent">
+          <div class="left-div">
+            <div>
+              <h2 class="main-heading scroll-animation">Vibrant world
+                of AI and Art</h2>
+            </div>
+            <div>
+              <a href="#" class="button-class">SHOP NOW</a>
+            </div>
+          </div>
+          <div class="right-div ">
+            <!-- <a href="#">
+                  <img src="{{ section.settings.play_button_image | image_url }}" alt="Play Button">
+                </a> -->
+          </div>
+        </div>
+        <div class="bottom-border">
+          <img src="images/bottom-border.png" class="main-banner-bottom" style="display: none;" alt="Bottom Border" />
+        </div>
+      </div>
+      <style>
+        .main-banner {
+          background-image: url("images/main-banner.png");
+          background-position: center bottom;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 900px;
+          overflow: hidden;
+          cursor: url(../gifs/cursor/imageextactor/play_cursor_2.png), auto;
+        }
+
+        .bottom-border img {
+          width: 100%;
+          margin-top: -160px;
+        }
+      </style>
+    </section>
+    <div class="scroll-section scroll-color">
+      <section class="page-width">
+        <div class="artist-section-wrapper ">
+          <div class="about-us-section">
+            <div>
+              <h2 class="aboutus-text scroll-animation">
+                Step into the canvas of innovation,
+                where imagination meets the intimacy
+                of bespoke artistry.
+              </h2>
+            </div>
+            <div class="our-story-button-div scroll-animation">
+              <a href="#" class="our-story-button">
+                Our Story
+              </a>
+            </div>
+          </div>
+          <div class="artist-section-top">
+            <div class="artist-section parent">
+              <div class="artist-content child">
+                <h2 class="artist-heading scroll-animation">Meet With
+                  The Artists</h2>
+                <p class="artist-subheading scroll-animation">
+                  Maecenas varius eu felis at sollicitudin keorbi
+                  eget erat ut ex elementum tristique vitae ut
+                  est Sed egestas laoreet enim, sed lobortis sem
+                  iaculis sit amet. Integer inincidut
+                </p>
+                <div class="artist-button-div scroll-animation">
+                  <a href="{{ section.settings.link }}" class="artist-button">LEARN MORE</a>
+                </div>
+              </div>
+              <div class="artist-images image-animation child">
+                <img src="{{ section.settings.artists_image | img_url: " master" }}" alt="Artists" class="artist-img"
+                  style="visibility:hidden;">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <style>
+          .artist-content.child {
+            padding-left: 120px;
+          }
+
+          .scroll-section {
+            background-image: url("images/artists-background.png");
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 1500px;
+            overflow: hidden;
+          }
+
+          .scroll-section {
+            max-width: 1600px;
+            margin: auto;
+          }
+
+          @media only screen and (max-width:1500px) {
+            .scroll-section {
+              height: 1400px;
+            }
+          }
+
+          @media only screen and (max-width:1024px) {
+            .scroll-section {
+              height: 1100px;
+            }
+          }
+
+          @media only screen and (max-width:768px) {
+            .scroll-section {
+              height: 800px;
+            }
+          }
+
+          @media only screen and (max-width:576px) {
+            .scroll-section {
+              background-image: url("images/bottom-border.png");
+              background-size: auto;
+              /* background-position: center bottom;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  height: 1000px;
+                  
+                  overflow: hidden; */
+            }
+          }
+        </style>
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const divA = document.querySelector('.page-color');
+            const mainPage = document.querySelector('.page-color');
+            const testimonialDiv = document.querySelector('.testimonial-color');
+            const testimonialContent = document.querySelector('.testimonial-content.child ');
+            const mainBanner = document.querySelector('.scroll-color-main');
+            const div2 = document.querySelector('.artist-section-top');
+            const galleryDiv = document.querySelector('.gallery-color');
+
+            window.addEventListener('scroll', function () {
+              const div2Rect = div2.getBoundingClientRect();
+              const testimonialRect =  testimonialDiv.getBoundingClientRect();
+              const galleryRect = galleryDiv.getBoundingClientRect();
+              const viewportHeight = window.innerHeight;
+
+              // Check if div2 is partially visible
+              const isPartiallyVisible = div2Rect.top < viewportHeight && div2Rect.bottom > 0;
+
+              // Check if div2 is fully visible
+              const isFullyVisible = div2Rect.top >= 0 && div2Rect.bottom <= viewportHeight;
+              
+
+              const testimonialCheckPartially = testimonialRect.top < viewportHeight && testimonialRect.bottom >0;
+              const galleryCheckPartially = galleryRect.top < viewportHeight && galleryRect.bottom >0;
+
+              if (isFullyVisible) {
+                divA.style.backgroundColor = '#fbd5ff'; // Maximum visibility - red
+                // mainBanner.style.backgroundColor = '#fbd5ff';
+              } else if (isPartiallyVisible) {
+                divA.style.backgroundColor = '#fbd5ff'; // Partial visibility - blue
+                // mainBanner.style.backgroundColor = '#fbd5ff';
+              } else {
+                divA.style.backgroundColor = 'white'; // Default background color
+                // mainBanner.style.backgroundColor = 'white';
+              }
+
+              if(testimonialCheckPartially){
+                //mainPage.style.backgroundColor = "#7b0087";
+                //testimonialContent.style.color = "#ffffff";
+              }else{
+                
+              }
+
+              if(galleryCheckPartially){
+    
+                mainPage.style.backgroundColor = "#ffffff !important";
+              }
+            });
+          });
+        </script>
+      </section>
+    </div>
+
+
+    <section>
+      <div class="ai-meets container">
+        <div class="ai-meets-texts">
+          <h2 class="ai-meets-heading scroll-animation">AI Meets Fine Arts</h2>
+          <p class="ai-meets-subheading scroll-animation">
+            Nulla vitae luctus sapien in a nibh sed ligula susc vitae tortor edtem por id nisl finibus
+          </p>
+        </div>
+        <div class="video-showcase">
+          <ul class="asset-cards">
+            <li class="asset-card-container"
+              data-video="https://player.vimeo.com/video/436960717?h=f5b9927bde&amp;title=0&amp;byline=0&amp;portrait=0&amp;pip=false">
+              <div class="play-button-div">
+                <img src="images/play-ai-meet.avif" alt="Play Button" />
+              </div>
+              <div class="asset-card-heading">
+
+                <div class="asset-card-heading-body">
+                  <h4 class="text-body-3">The three-time Staff Picked director shares his deeply personal,
+                    powerful short films with Vimeo.</h4>
+                </div>
+              </div>
+
+              <div class="video-wrapper">
+                <img class="thumbnail"
+                  src="https://i.vimeocdn.com/custom_asset/3b519a6d03c716419d34270adc3a7889?w=1408&amp;q=80"
+                  alt="Morgan Cooper">
+              </div>
+            </li>
+            <li class="asset-card-container"
+              data-video="https://player.vimeo.com/video/764297424?h=04309e89de&amp;title=0&amp;byline=0&amp;portrait=0&amp;pip=false">
+              <div class="play-button-div">
+                <img src="images/play-ai-meet.avif" alt="Play Button" />
+              </div>
+              <div class="asset-card-heading">
+
+                <div class="asset-card-heading-body">
+                  <h4 class="text-body-3">Vermicular's video investment boosts global reach and creates
+                    reusable marketing assets.</h4>
+                </div>
+              </div>
+
+              <div class="video-wrapper">
+                <img class="thumbnail"
+                  src="https://i.vimeocdn.com/custom_asset/3cb41dceafd91acc5f09269d42abff7d?w=1408&amp;q=80"
+                  alt="Vermicular">
+              </div>
+            </li>
+            <li class="asset-card-container"
+              data-video="https://player.vimeo.com/video/764297424?h=04309e89de&amp;title=0&amp;byline=0&amp;portrait=0&amp;pip=false">
+              <div class="play-button-div">
+                <img src="images/play-ai-meet.avif" alt="Play Button" />
+              </div>
+              <div class="asset-card-heading">
+
+                <div class="asset-card-heading-body">
+                  <h4 class="text-body-3">Vermicular's video investment boosts global reach and creates
+                    reusable marketing assets.</h4>
+                </div>
+              </div>
+
+              <div class="video-wrapper">
+                <img class="thumbnail"
+                  src="https://i.vimeocdn.com/custom_asset/3cb41dceafd91acc5f09269d42abff7d?w=1408&amp;q=80"
+                  alt="Vermicular">
+              </div>
+            </li>
+            <li class="asset-card-container"
+              data-video="https://player.vimeo.com/video/750432905?h=ab55dbe681&amp;title=0&amp;byline=0&amp;portrait=0&amp;pip=false">
+              <div class="play-button-div">
+                <img src="images/play-ai-meet.avif" alt="Play Button" />
+              </div>
+              <div class="asset-card-heading">
+
+                <div class="asset-card-heading-body">
+                  <h4 class="text-body-3">With 300,000 employees worldwide, Stellantis relies on Vimeo for
+                    their video-based virtual instruction globally.</h4>
+                </div>
+              </div>
+
+              <div class="video-wrapper">
+                <img class="thumbnail"
+                  src="https://i.vimeocdn.com/custom_asset/e0dab8beb6c817de5b52637aae31b7c1?w=1408&amp;q=80"
+                  alt="Stellantis">
+
+              </div>
+            </li>
+
+          </ul>
+
+          <!-- Modal Structure -->
+          <div id="video-modal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <iframe id="modal-video" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+        /* CSS for Video Showcase */
+        .play-button-div img {
+          width: 70%;
+        }
+
+        .asset-cards {
+          display: flex;
+          gap: 1rem;
+          padding: 1rem;
+        }
+
+        .asset-card-container {
+          flex: 1;
+          position: relative;
+          overflow: hidden;
+          transition: flex 0.5s ease-in-out;
+          border-radius: 15px;
+        }
+
+        .asset-card-container:hover {
+          flex: 5;
+        }
+
+        .asset-card-heading {
+          position: absolute;
+          bottom: 10px;
+          left: 0;
+          right: 0;
+          background: rgba(0, 0, 0, 0.5);
+          color: white;
+          padding: 1rem;
+          transition: opacity 0.5s;
+          opacity: 0;
+        }
+
+        .play-button-div {
+          opacity: 0;
+        }
+
+        .asset-card-container:hover .play-button-div {
+          opacity: 1;
+        }
+
+        .play-button-div {
+          position: absolute;
+          /* top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: flex; 
+          justify-content: center; 
+          align-items: center; 
+          width: 50px; 
+          height: 50px;  */
+        }
+
+        .play-button {
+          width: 70px;
+          height: 70px;
+          transform: rotate(9deg);
+        }
+
+        .asset-card-container:hover .asset-card-heading {
+          opacity: 1;
+        }
+
+        .asset-card-container:hover .thumbnail {
+          width: 100%;
+        }
+
+        .video-wrapper {
+          width: 100%;
+          height: 100%;
+        }
+
+        .thumbnail {
+          height: 500px;
+          object-fit: cover;
+        }
+
+        .thumbnail:hover {
+          width: 100%;
+        }
+
+        /* Modal styling */
+        .modal {
+          display: none;
+          /* Hidden by default */
+          position: fixed;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: rgba(0, 0, 0, 0.5);
+          justify-content: center;
+          align-items: center;
+        }
+
+        .modal-content {
+          position: relative;
+          margin: auto;
+          padding: 20px;
+          width: 80%;
+          max-width: 800px;
+          background: #fff;
+        }
+
+        .close {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          color: #aaa;
+          font-size: 28px;
+          font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+        iframe {
+          width: 100%;
+          height: 450px;
+          border: none;
+        }
+
+        .ai-meets {
+          padding-bottom: 100px;
+          /* margin-top: -100px; */
+        }
+
+        li.asset-card-container:hover {
+          cursor: pointer;
+        }
+
+        .play-button-div {
+          transition: transform 0.1s linear;
+          /* Quick transition for smoother follow effect */
+          position: absolute;
+          /* Ensure it can move freely within the container */
+          pointer-events: none;
+          /* Prevent interference with cursor */
+        }
+      </style>
+      <script>
+        //     document.addEventListener('DOMContentLoaded', function() {
+        //   const assetCard = document.querySelector('.asset-card-container');
+        //   const playButtonDiv = document.querySelector('.play-button-div');
+
+        //   assetCard.addEventListener('mousemove', function(e) {
+        //     const rect = assetCard.getBoundingClientRect();
+        //     const x = e.clientX - rect.left;
+        //     const y = e.clientY - rect.top;
+
+        //     playButtonDiv.style.transform = `translate(${x - 25}px, ${y - 25}px)`; // Adjust 25 to center the play button
+        //   });
+        // });
+
+        document.addEventListener('DOMContentLoaded', function () {
+          const assetCards = document.querySelectorAll('.asset-card-container');
+          const followDelay = 0.1; // Delay factor for following effect
+
+          assetCards.forEach(card => {
+            const playButtonDiv = card.querySelector('.play-button-div');
+
+            let targetX = 0;
+            let targetY = 0;
+            let currentX = 0;
+            let currentY = 0;
+
+            card.addEventListener('mousemove', function (e) {
+              const rect = card.getBoundingClientRect();
+              targetX = e.clientX - rect.left - playButtonDiv.offsetWidth / 2;
+              targetY = e.clientY - rect.top - playButtonDiv.offsetHeight / 2;
+            });
+
+            function animate() {
+              currentX += (targetX - currentX) * followDelay;
+              currentY += (targetY - currentY) * followDelay;
+
+              playButtonDiv.style.transform = `translate(${currentX}px, ${currentY}px)`;
+
+              requestAnimationFrame(animate);
+            }
+
+            animate();
+          });
+        });
+
+
+
+        document.addEventListener("DOMContentLoaded", (event) => {
+          const modal = document.getElementById("video-modal");
+          const modalVideo = document.getElementById("modal-video");
+          const closeBtn = document.querySelector(".close");
+
+          document.querySelectorAll(".asset-card-container").forEach((card) => {
+            card.addEventListener("click", function () {
+              const videoSrc = this.getAttribute("data-video");
+              modal.style.display = "flex";
+              modalVideo.src = videoSrc;
+            });
+          });
+
+          closeBtn.onclick = function () {
+            modal.style.display = "none";
+            modalVideo.src = "";
+          };
+
+          window.onclick = function (event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+              modalVideo.src = "";
+            }
+          };
+        });
+
+
+
+      </script>
+    </section>
+    <section>
+      <div class="blessing-girl parent container">
+        <div class="blessing-girl-image image-animation child">
+          <img src="images/blessing-girl-image.webp" alt="Blessing Girl Image" />
+        </div>
+
+        <div class="blessing-girl-content child">
+          <h2 class="blessing-girl-heading scroll-animation">Meet The
+            Blessing Girl</h2>
+          <p class="blessing-girl-subheading scroll-animation">
+            Maecenas varius eu felis at sollicitudin keorbi eget erat ut ex elementum tristique vitae ut est Sed egestas
+            laoreet enim, sed lobortis sem iaculis sit amet. Integer inincidut
+          </p>
+          <div class="artist-button-div scroll-animation">
+            <a href="{{ section.settings.link }}" class="blessing-girl-button">LEARN MORE</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container popshop">
+        <div class="top">
+          <h2>The PopShop</h2>
+        </div>
+        <div class="bottom">
+          <div class="grid-box">
+            <div class="box">
+              <div class="image-box">
+                <img class="box-img" src="images/box-1.png" />
+                <p>The Castle decor nature</p>
+                <div class="fzool">
+                  <div class="arrow">
+                    <img class="box-img" src="images/curve.png" />
+                  </div>
+                  <div class="arrow-sign">
+                    <img class="box-img" src="images/arrow-icon.png" />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="box">
+              <div class="image-box">
+                <img class="box-img"
+                  src="images/box-4.png" />
+                <p>Donec posuere sapienon</p>
+                <div class="fzool">
+                  <div class="arrow">
+                    <img class="box-img" src="images/curve.png" />
+                  </div>
+                  <div class="arrow-sign">
+                    <img class="box-img" src="images/arrow-icon.png" />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="box">
+              <div class="image-box">
+                <img class="box-img" src="images/box-1.png" />
+                <p>The Castle decor nature</p>
+                <div class="fzool">
+                  <div class="arrow">
+                    <img class="box-img" src="images/curve.png" />
+                  </div>
+                  <div class="arrow-sign">
+                    <img class="box-img" src="images/arrow-icon.png" />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="box">
+              <div class="image-box">
+                <img class="box-img" src="images/box-4.png" />
+                <p>The Castle decor nature</p>
+                <div class="fzool">
+                  <div class="arrow">
+                    <img class="box-img" src="images/curve.png" />
+                  </div>
+                  <div class="arrow-sign">
+                    <img class="box-img" src="images/arrow-icon.png" />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="testimonial-outer-wrapper ">
+        <div class="testimonial-top page-width">
+          <div class="image-div">
+            <img src="images/client-feedback-img.png" alt="Testimonial Section" class="testimonial-image">
+          </div>
+
+          <div class="testimonial-section">
+            <diV class="testimonial-content child testimonial-color ">
+              <div class="quote-mark-div">
+                <img src="images/quote-mark.png" alt="Quote Mark">
+              </div>
+              <h2 class="testimonial-heading scroll-animation">Fan
+                Feedback</h2>
+              <p class="testimonial-subheading scroll-animation">
+                "Nulla vitae sapien a sapien sodales porttitor
+                portaut metus. In eu congue est vitae iaculis nunc
+                neque libero, consequat a dignissim Duis aute irure dolor in reprehenderit in voluptate velit esse"
+              </p>
+              <p class="testimonial-subheading scroll-animation">
+                angelika dbrown
+              </p>
+              <div class="testimonial-button-div">
+                <a href="#" class="artist-button">View More Reviews</a>
+              </div>
+            </diV>
+
+          </div>
+        </div>
+        <div class="testimonial-bottom">
+          <img src="images/border-bottom-white.png" alt="Testimonial Border">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="licensing-section ">
+        <div class="licensing-content">
+          <h2 class="ai-meets-heading">AI Meets Fine Arts </h2>
+          <p class="ai-meets-subheading">Nulla vitae luctus sapien in a nibh sed ligula susc vitae
+            tortor edtem por id nisl finibus
+          </p>
+          <div class="licensing-button-div gallery-color">
+            <a href="#" class="blessing-girl-button">Learn More</a>
+          </div>
+        </div>
+        <div class="image-gallery">
+          <div class="single-image">
+            <img src="images/licensing/1.png" alt="Gallery Image" />
+          </div>
+
+          <div class="double-image">
+            <img src="images/licensing/2.png" alt="Gallery Image" />
+            <img src="images/licensing/3.png" class="double-img" alt="Gallery Image" />
+          </div>
+
+          <div class="double-image">
+            <img src="images/licensing/4.png" alt="Gallery Image" />
+            <img src="images/licensing/5.png" class="double-img" alt="Gallery Image" />
+          </div>
+          <div class="double-image">
+            <img src="images/licensing/6.png" alt="Gallery Image" />
+            <img src="images/licensing/7.png" class="double-img" alt="Gallery Image" />
+          </div>
+
+          <div class="single-image">
+            <img src="images/licensing/8.png" alt="Gallery Image" />
+          </div>
+
+        </div>
+      </div>
+      <style>
+        .single-image img:hover,
+        .double-image img:hover {
+          transform: scale(1.05);
+        }
+
+        .single-image img,
+        .double-image img {
+          transition: transform 0.3s ease-in-out;
+          cursor: pointer;
+        }
+      </style>
+    </section>
+  </div>
+</body>
+
+</html>

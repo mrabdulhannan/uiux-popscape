@@ -206,3 +206,8 @@ section.fifth-section.page-width {
     justify-content: space-between;
     padding-top: 60px;
 }
+
+
+.page-color{
+  transition: background-color 0.3s ease;
+}

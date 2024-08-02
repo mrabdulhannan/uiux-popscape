@@ -1,0 +1,941 @@
+/* Main Banner */
+
+  .left-div {
+    padding-left: 120px;
+    width: 60%;
+    margin: auto;
+    padding-bottom: 12%;
+  }
+  
+  .left-div .main-heading {
+    font-family: Hanuman;
+    font-weight: 800;
+    color: white;
+    font-size: 108px;
+    line-height: 100%;
+  }
+  
+  .right-div {
+    width: 40%;
+    padding-top: 312px;
+    padding-left: 95px;
+  }
+  
+  .parent {
+    display: flex;
+    width: 100%;
+  }
+  
+  a.button-class {
+    background: #fe5da0;
+    padding: 20px 60px;
+    border-radius: 30px;
+    font-size: 21px;
+    color: white;
+    font-family: "HANUMAN";
+    font-weight: 700;
+    text-decoration: none;
+  }
+  
+  /* About Us Section */
+  .aboutus-text {
+    font-family: "Hanuman";
+    font-size: 61px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0;
+    color: #000;
+  }
+  
+  .about-us-section {
+    padding-top: 130px;
+  }
+  
+  .our-story-button-div {
+    text-align: center;
+    padding-top: 45px;
+    padding-bottom: 100px;
+  }
+  
+  a.our-story-button {
+    background: #840490;
+    color: white;
+    padding: 15px 50px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "HANUMAN";
+    text-decoration: none;
+  }
+  
+  .rich-text__blocks {
+    max-width: 100% !important;
+  }
+  
+  /* Artist Section */
+  
+  .artist-button {
+    background: #fe5da0;
+    color: white;
+    padding: 15px 50px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "HANUMAN";
+    text-decoration: none;
+    color: #000000;
+  }
+  .child {
+    width: 50%;
+  }
+  
+  .artist-content.child {
+    /* padding-top: 100px; */
+  }
+  
+  h2.artist-heading {
+    font-size: 86px;
+    font-family: "Hanuman";
+    font-weight: 600;
+    margin-bottom: 0;
+    color: #000000;
+  }
+  
+  p.artist-subheading {
+    font-size: 18px;
+    font-family: "Hanuman";
+  
+    text-align: justify;
+    padding-right: 50px;
+    color: #000000;
+  }
+  
+  .artist-button-div {
+    padding-top: 50px;
+  }
+  
+  .artist-content.child {
+    /* padding-left: 190px; */
+  }
+  
+  /* .scroll-section,
+  .scroll-color-m {
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+  } */
+
+  .page-color{
+    transition: background-color 0.3s ease;
+  }
+  
+  /* .artist-section-bottom img {
+    width: 100%;
+  } */
+  
+  .image-animation img {
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+  
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .about-us-section,
+  .artist-section-top {
+    /* height: 100vh; */
+  }
+  
+  /* AI MEET with Artist */
+  
+  .ai-meets.container {
+    /* padding-top: 55px; */
+  }
+  .video-showcase h4.text-body-3 {
+    color: #ffffff;
+  }
+  h2.ai-meets-heading {
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 0;
+    font-family: "Hanuman";
+  }
+  
+  .ai-meets-texts {
+    text-align: center;
+    font-family: "Hanuman";
+    font-size: 60px;
+  }
+  
+  p.ai-meets-subheading {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  .video-showcase {
+    padding: 0 120px;
+  }
+  
+  /* Blessing Girl Section */
+  
+  .section-padding {
+    padding: 0 120px;
+  }
+  
+  .blessing-girl.parent {
+    background: #ff60a2;
+    padding-left: 20px;
+  }
+  
+  .blessing-girl-image.child {
+    width: 40%;
+    display: flex;
+    /* justify-content: center;
+      padding: 100px; */
+  }
+  
+  h2.blessing-girl-heading {
+    font-size: 86px;
+    font-family: "Hanuman";
+    font-weight: 600;
+    margin-bottom: 0;
+  
+    color: white;
+  }
+  
+  .blessing-girl-subheading {
+    font-size: 18px;
+    font-family: "Hanuman";
+    text-align: center;
+    color: white;
+  }
+  
+  .blessing-girl-button {
+    background: #840490;
+    color: white;
+    padding: 15px 50px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "HANUMAN";
+    text-decoration: none;
+  }
+  
+  .blessing-girl-content.child {
+    text-align: center;
+  }
+  
+  .blessing-girl-content.child {
+    padding-left: 190px;
+  }
+  
+  .blessing-girl-image img {
+    /* max-width: 400px; */
+  }
+  
+  /* The Pop Shop */
+  
+  .pop-shop-section {
+    text-align: center;
+  }
+  
+  /* The PopShop */
+  .popshop {
+    padding-bottom: 80px;
+    padding-top: 50px;
+  }
+  .popshop .top {
+    text-align: center;
+  }
+  .popshop .top h2 {
+    font-family: "Hanuman";
+    font-weight: bold;
+    font-size: 72px;
+    color: #000;
+  }
+  .popshop .bottom {
+    /* max-width: 1200px; */
+    width: 100%;
+    margin: auto;
+  }
+  .popshop .bottom .grid-box {
+    display: flex;
+    justify-content: center;
+    column-gap: 25px;
+    align-items: stretch;
+  }
+  .popshop .bottom .grid-box .box {
+    width: calc(25% - 25px);
+    display: flex;
+    flex-direction: column;
+  }
+  .popshop .bottom .grid-box .box .image-box {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  .popshop .bottom .grid-box .box .image-box p {
+    position: absolute;
+    bottom: 10px;
+    padding-left: 20px;
+    padding-right: 40px;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: "Hanuman";
+    color: #fff;
+    z-index: 1;
+    line-height: normal;
+  }
+  .image-box {
+    position: relative;
+    height: 100%;
+  }
+  .image-box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 1) -20%,
+      rgba(0, 0, 0, 0) 40%
+    ); */
+    pointer-events: none;
+    border-radius: 30px;
+  }
+  .box-img {
+    width: 100%;
+    height: auto;
+    flex-grow: 1;
+    object-fit: cover;
+    border-radius: 30px;
+  }
+  .arrow {
+    width: 100%;
+    height: 100%;
+  }
+  .fzool {
+    position: absolute;
+    right: -9px;
+    bottom: -2px;
+    width: 90px;
+    height: 90px;
+    z-index: 2;
+    border-radius: 37%;
+  }
+  .box-img {
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    object-fit: cover;
+    border-radius: 30px;
+  }
+  .arrow-sign {
+    position: absolute;
+    bottom: 14px;
+    right: 0;
+    z-index: 7;
+    background-color: #000;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .arrow-sign .box-img {
+    object-fit: none;
+  }
+
+  .image-box:hover::after {
+    background-color: #ff60a2; /* Dark overlay color on hover */
+  }
+  
+  
+  /* Testimonial Section */
+  
+  /* .testimonial-section {
+    background-image: url("{{section.settings.background_image | img_url : 'master' }}");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 750px; 
+    overflow: hidden;
+    width: 100%;
+  } */
+  
+  .testimonial-bottom {
+       height: 200px;
+      /* background-image: linear-gradient(to top, white 20%, rgba(0, 0, 0, 0) 20%); */
+  }
+  .testimonial-content.child {
+    text-align: center;
+    padding-top: 90px;
+    padding-left: 100px;
+  }
+  
+  h2.testimonial-heading {
+    font-size: 86px;
+    font-family: "Hanuman";
+    font-weight: 600;
+    margin-bottom: 0;
+    color: #ffffff;
+    margin-top: 30px;
+    line-height: 86px;
+  }
+  
+  .testimonial-subheading {
+    font-size: 18px;
+    font-family: "Hanuman";
+    color: #ffffff;
+  }
+  
+  .testimonial-button-div {
+    padding-top: 30px;
+  }
+  
+  .testimonial-outer-wrapper {
+    margin-top: 170px;
+    background-color: #7b0087;
+  }
+  
+  img.testimonial-image {
+    /* float: right; */
+    /* margin-right: -50px; */
+    /* margin-bottom: -465px; */
+    right: 0;
+    width: 570px;
+    position: absolute;
+    margin-top: -100px;
+  }
+  
+  .testimonial-section {
+    /* background-color: #7b0087; */
+    /* height: 700px; */
+  }
+  
+  .testimonial-bottom img {
+    width: 100%;
+    /* padding-top:100px; */
+  }
+  
+  img.testimonial-image {
+    right: 0;
+    width: 570px;
+    position: absolute;
+    margin-top: -100px;
+  }
+  /* Licensing Section */
+  
+  .licensing-section.container {
+    padding-top: 65px;
+    overflow-x: hidden;
+  }
+  .licensing-content {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .licensing-content {
+    font-family: "Hanuman";
+    text-align: center;
+  }
+  
+  .licensing-button-div {
+    margin-top: 35px;
+  }
+  
+  .image-gallery {
+    display: flex;
+    gap: 40px;
+    text-align: center;
+    padding-top: 100px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  img.double-img {
+    padding-top: 20px;
+  }
+  
+  .container {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  
+  .image-gallery .double-image img {
+    width: 100%;
+    object-fit: contain;
+    height: auto;
+  }
+  
+  /* CSS for Responsiveness */
+  
+  @media only screen and (max-width: 1500px) {
+    /* 24-07 */
+    .artist-images img {
+      width: 80%;
+    }
+  
+    .about-us-section,
+    .artist-section-top {
+      height: auto;
+    }
+    /*  */
+    .image-gallery {
+      gap: 10px;
+    }
+    .left-div .main-heading {
+      font-size: 80px;
+    }
+    h2.artist-heading {
+      font-size: 60px;
+    }
+  
+    h2.blessing-girl-heading {
+      font-size: 60px;
+    }
+  }
+  
+  @media only screen and (max-width: 1200px) {
+    .image-gallery img {
+      width: 80%;
+    }
+    .image-gallery {
+      gap: 10px;
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    /*  */
+    .artist-images img {
+      width: 80%;
+    }
+  
+    .about-us-section,
+    .artist-section-top {
+      height: auto;
+    }
+    /*  */
+    .left-div {
+      padding: 40px;
+    }
+  
+    .blessing-girl-image.child img {
+      width: 460px;
+      padding-top: 35%;
+    }
+  
+    .about-us-section {
+      padding-top: 50px;
+    }
+  
+    .aboutus-text {
+      font-size: 42px;
+    }
+  
+    .blessing-girl-content.child {
+      padding-left: 60px;
+    }
+  
+    .artist-content.child {
+      padding-left: 50px;
+    }
+  
+    img.testimonial-image {
+      width: 400px;
+      margin-bottom: -300px;
+      margin-right: 0;
+    }
+  
+    h2.testimonial-heading {
+      font-size: 60px;
+    }
+  
+    h2.ai-meets-heading {
+      font-size: 60px;
+    }
+  
+    .popshop .bottom .grid-box .box .image-box p {
+      font-size: 16px;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .left-div .main-heading {
+      font-size: 40px;
+    }
+    a.button-class {
+      padding: 10px 30px;
+      font-size: 16px;
+    }
+    .main-banner.parent {
+      height: 500px;
+    }
+  
+    .right-div {
+      padding-top: 150px;
+    }
+  
+    .right-div a img {
+      width: 40%;
+    }
+  
+    .about-us-section {
+      padding-top: 50px;
+    }
+  
+    .aboutus-text {
+      font-size: 36px;
+    }
+  
+    .our-story-button-div {
+      padding-top: 25px;
+      padding-bottom: 50px;
+    }
+  
+    .artist-section.parent {
+      height: auto;
+    }
+  
+    .artist-content.child {
+      padding-top: 20px;
+    }
+  
+    h2.artist-heading {
+      font-size: 30px;
+    }
+  
+    p.artist-subheading {
+      font-size: 14px;
+    }
+  
+    .artist-button-div {
+      padding-top: 30px;
+    }
+  
+    a.artist-button {
+      padding: 10px 30px;
+    }
+  
+    h2.ai-meets-heading {
+      font-size: 40px;
+    }
+  
+    p.ai-meets-subheading {
+      font-size: 16px;
+    }
+  
+    .video-wrapper img.thumbnail {
+      height: 300px;
+    }
+    .play-button-div img {
+      width: 60px;
+    }
+  
+    .asset-card-heading-body h4.text-body-3 {
+      font-size: 12px;
+    }
+  
+    .asset-card-heading {
+      padding: 0 10px;
+    }
+    .blessing-girl-image.child img {
+      width: 300px;
+      padding-top: 20%;
+      padding-bottom: 20%;
+    }
+  
+    h2.blessing-girl-heading {
+      font-size: 40px;
+    }
+  
+    p.blessing-girl-subheading {
+      font-size: 16px;
+    }
+  
+    .artist-button-div {
+      padding-top: 15px;
+    }
+  
+    a.blessing-girl-button {
+      padding: 15px 30px;
+    }
+  
+    .popshop .top h2 {
+      font-size: 40px;
+    }
+  
+    .popshop .bottom .grid-box .box .image-box p {
+      font-size: 14px;
+    }
+  
+    img.testimonial-image {
+      width: 250px;
+      margin-bottom: -180px;
+      margin-right: 0;
+    }
+  
+    .quote-mark-div img {
+      width: 50px;
+    }
+  
+    .testimonial-content.child {
+      padding-top: 50px;
+      padding-left: 50px;
+    }
+  
+    h2.testimonial-heading {
+      font-size: 40px;
+      margin-top: 15px;
+    }
+  
+    p.testimonial-subheading {
+      font-size: 15px;
+    }
+  
+    .testimonial-section {
+      /* height: 600px; */
+    }
+    .artist-images img {
+      width: 90%;
+    }
+    .artist-section-bottom {
+      padding-top: 50px;
+    }
+  }
+  
+  @media only screen and (max-width: 576px) {
+    .about-us-section,
+    .artist-section-top {
+      height: auto;
+    }
+  
+    .artist-images img {
+      width: 70%;
+    }
+  
+    .artist-section-bottom {
+      /* padding-top: 100px; */
+    }
+    .main-banner.parent {
+      flex-direction: column;
+    }
+  
+    img.testimonial-image {
+      position: relative;
+    }
+  
+    .testimonial-top {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap; /* Allows flex items to wrap to the next line */
+      justify-content: space-between; /* Optional: Adds space between items */
+      align-items: center; /* Optional: Centers items vertically within each row */
+      gap: 10px;
+    }
+  
+    .image-column {
+      flex: 1 1 calc(50% - 10px);
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+  
+    .blessing-girl-image.child {
+      padding: 10px;
+    }
+    .left-div {
+      width: 100%;
+      text-align: center;
+      padding: 0px;
+    }
+  
+    .right-div {
+      width: 100%;
+      padding: 0;
+      text-align: center;
+    }
+  
+    .right-div a img {
+      width: 20%;
+      padding-top: 50px;
+    }
+  
+    .aboutus-text {
+      font-size: 24px;
+    }
+  
+    .artist-section.parent {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .artist-content.child {
+      width: 100%;
+    }
+  
+    .artist-images.child {
+      width: 100%;
+    }
+  
+    .artist-button-div {
+      padding-right: 190px;
+    }
+  
+    .artist-content.child {
+      padding-left: 10px;
+    }
+  
+    p.artist-subheading {
+      padding: 10px;
+    }
+  
+    .ai-meets-texts {
+      padding: 20px;
+    }
+  
+    ul.asset-cards {
+    }
+  
+    li.asset-card-container {
+    }
+  
+    .video-showcase {
+      padding: 0 5px;
+    }
+  
+    .blessing-girl.parent {
+      flex-direction: column;
+    }
+  
+    .blessing-girl-image.child {
+      width: 100%;
+    }
+  
+    .blessing-girl-content.child {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .blessing-girl-image.child img {
+      padding-bottom: 0;
+    }
+  
+    .artist-button-div {
+      padding-right: 0;
+      margin-bottom: 30px;
+    }
+  
+    .grid-box {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 20px !important;
+    }
+  
+    .box:nth-child(1),
+    .box:nth-child(2),
+    .box:nth-child(3),
+    .box:nth-child(4) {
+      width: 100% !important;
+    }
+    .box {
+      /* background-color: #f9f9f9; */
+      padding: 20px !important;
+      text-align: center !important;
+    }
+  
+    .image-box {
+      position: relative !important;
+    }
+  
+    .box-img {
+      width: 100% !important;
+      height: auto !important;
+    }
+  
+    .fzool {
+      display: flex !important;
+      justify-content: center !important;
+      gap: 10px !important;
+    }
+  
+    .arrow,
+    .arrow-sign {
+      display: inline-block !important;
+    }
+  
+    .testimonial-outer-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0;
+      /* justify-content: center; */
+      /* text-align: center; */
+    }
+  
+    img.testimonial-image {
+      /* width: 300px;
+      margin: 0 auto;
+      margin-bottom: 20px; */
+      margin: auto;
+      width: 100%;
+      padding: 50px 50px;
+    }
+  
+    .testimonial-content.child {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .licensing-content {
+      padding: 20px;
+    }
+  }
+  
+  @media only screen and (min-width: 1900px) {
+    img.testimonial-image {
+      left: 60%;
+    }
+  }
+  /* Scroll Animation */
+  
+  /* .scroll-animation {
+      opacity: 1;
+      transform: translateY(100px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .scroll-animation.visible {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  
+  .scroll-animation-left {
+      opacity: 1;
+      transform: translateX(100px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .scroll-animation-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+  } */

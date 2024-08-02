@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/newstyle.css" />
+</head>
+<body>
+    <div class="home-page page-width">
+        <section class="first-section">
+            <div class="main-banner-outer-wrap">
+                <div class="main-banner parent">
+                  <div class="left-div">
+                    <div>
+                      <h2 class="main-heading">Vibrant world
+                        of AI and Art</h2>
+                    </div>
+                    <div>
+                      <a href="#" class=" big-button-p">SHOP NOW</a>
+                    </div>
+                  </div>
+                  <div class="right-div ">
+                    <!-- <a href="#">
+                          <img src="{{ section.settings.play_button_image | image_url }}" alt="Play Button">
+                        </a> -->
+                  </div>
+                </div>
+                <div class="bottom-border">
+                  <img src="images/bottom-border.png" class="main-banner-bottom" style="display: none;" alt="Bottom Border" />
+                </div>
+              </div>
+        </section>
+        <section class="second-section">
+            <div class="artist-section-wrapper ">
+                <div class="about-us-section">
+                  <div>
+                    <h2 class="aboutus-text scroll-animation">
+                      Step into the canvas of innovation,
+                      where imagination meets the intimacy
+                      of bespoke artistry.
+                    </h2>
+                  </div>
+                  <div class="our-story-button-div scroll-animation">
+                    <a href="#" class="our-story-button">
+                      Our Story
+                    </a>
+                  </div>
+                </div>
+                <div class="artist-section-top">
+                  <div class="artist-section parent">
+                    <div class="artist-content child">
+                      <h2 class="artist-heading scroll-animation">Meet With
+                        The Artists</h2>
+                      <p class="artist-subheading scroll-animation">
+                        Maecenas varius eu felis at sollicitudin keorbi
+                        eget erat ut ex elementum tristique vitae ut
+                        est Sed egestas laoreet enim, sed lobortis sem
+                        iaculis sit amet. Integer inincidut
+                      </p>
+                      <div class="artist-button-div scroll-animation">
+                        <a href="{{ section.settings.link }}" class="artist-button">LEARN MORE</a>
+                      </div>
+                    </div>
+                    <div class="artist-images image-animation child">
+                      <img src="{{ section.settings.artists_image | img_url: " master" }}" alt="Artists" class="artist-img"
+                        style="visibility:hidden;">
+                    </div>
+                  </div>
+                </div>
+      
+              </div>
+        </section>
+    </div>
+
+    <style>
+        /* First Section */
+        .main-banner {
+          background-image: url("images/main-banner.png");
+          background-position: center bottom;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 900px;
+          overflow: hidden;
+        }
+
+        .bottom-border img {
+          width: 100%;
+          margin-top: -160px;
+        }
+    </style>
+    
+</body>
+</html>
