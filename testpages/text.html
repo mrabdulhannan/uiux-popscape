@@ -5,15 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Circle Text Animation</title>
   <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
-      background-color: #f0f0f0; /* Background color for the whole page */
-    }
-
     .circle-container {
       position: fixed;
       bottom: 20px;
@@ -47,6 +38,32 @@
         transform: rotate(360deg);
       }
     }
+
+    @keyframes typewriter {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    .typewriter-text {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid white;
+      animation: typewriter 4s steps(40) 1s 1 normal both,
+                 blinkTextCursor 500ms steps(40) infinite normal;
+    }
+
+    @keyframes blinkTextCursor {
+      from {
+        border-right-color: white;
+      }
+      to {
+        border-right-color: transparent;
+      }
+    }
   </style>
 </head>
 <body>
@@ -54,11 +71,36 @@
     <svg viewBox="0 0 100 100">
       <path id="circlePath" d="M 50, 50 m -25, 0 a 25,25 0 1,1 50,0 a 25,25 0 1,1 -50,0" fill="none" />
       <text class="circular-text">
-        <textPath xlink:href="#circlePath">
+        <textPath xlink:href="#circlePath" id="typewriter-text">
           Popscapes Popscapes Popscapes
         </textPath>
       </text>
     </svg>
   </div>
+
+  <script>
+    const text = document.getElementById('typewriter-text');
+    const textContent = text.textContent;
+    text.textContent = '';
+
+    function type() {
+      let i = 0;
+      function typing() {
+        if (i < textContent.length) {
+          text.textContent += textContent.charAt(i);
+          i++;
+          setTimeout(typing, 100);
+        } else {
+          setTimeout(() => {
+            text.textContent = '';
+            type();
+          }, 2000);
+        }
+      }
+      typing();
+    }
+
+    type();
+  </script>
 </body>
 </html>

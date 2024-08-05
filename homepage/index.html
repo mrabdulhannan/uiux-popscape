@@ -152,7 +152,7 @@
 
             window.addEventListener('scroll', function () {
               const div2Rect = div2.getBoundingClientRect();
-              const testimonialRect =  testimonialDiv.getBoundingClientRect();
+              const testimonialRect = testimonialDiv.getBoundingClientRect();
               const galleryRect = galleryDiv.getBoundingClientRect();
               const viewportHeight = window.innerHeight;
 
@@ -161,10 +161,10 @@
 
               // Check if div2 is fully visible
               const isFullyVisible = div2Rect.top >= 0 && div2Rect.bottom <= viewportHeight;
-              
 
-              const testimonialCheckPartially = testimonialRect.top < viewportHeight && testimonialRect.bottom >0;
-              const galleryCheckPartially = galleryRect.top < viewportHeight && galleryRect.bottom >0;
+
+              const testimonialCheckPartially = testimonialRect.top < viewportHeight && testimonialRect.bottom > 0;
+              const galleryCheckPartially = galleryRect.top < viewportHeight && galleryRect.bottom > 0;
 
               if (isFullyVisible) {
                 divA.style.backgroundColor = '#fbd5ff'; // Maximum visibility - red
@@ -177,15 +177,15 @@
                 // mainBanner.style.backgroundColor = 'white';
               }
 
-              if(testimonialCheckPartially){
+              if (testimonialCheckPartially) {
                 //mainPage.style.backgroundColor = "#7b0087";
                 //testimonialContent.style.color = "#ffffff";
-              }else{
-                
+              } else {
+
               }
 
-              if(galleryCheckPartially){
-    
+              if (galleryCheckPartially) {
+
                 mainPage.style.backgroundColor = "#ffffff !important";
               }
             });
@@ -563,8 +563,7 @@
             </div>
             <div class="box">
               <div class="image-box">
-                <img class="box-img"
-                  src="images/box-4.png" />
+                <img class="box-img" src="images/box-4.png" />
                 <p>Donec posuere sapienon</p>
                 <div class="fzool">
                   <div class="arrow">
@@ -694,6 +693,136 @@
           cursor: pointer;
         }
       </style>
+    </section>
+    <section>
+      <div class="circle-container">
+        <svg viewBox="0 0 100 100">
+          <path id="circlePath" d="M 50, 50 m -25, 0 a 25,25 0 1,1 50,0 a 25,25 0 1,1 -50,0" fill="none" />
+          <text class="circular-text">
+            <textPath xlink:href="#circlePath" id="typewriter-text">
+              Popscapes Popscapes
+            </textPath>
+          </text>
+        </svg>
+      </div>
+
+      <script>
+        const text = document.getElementById('typewriter-text');
+        const textContent = text.textContent;
+        text.textContent = '';
+
+        function type() {
+          let i = 0;
+          function typing() {
+            if (i < textContent.length) {
+              text.textContent += textContent.charAt(i);
+              i++;
+              setTimeout(typing, 100);
+            } else {
+              setTimeout(() => {
+                text.textContent = '';
+                type();
+              }, 2000);
+            }
+          }
+          typing();
+        }
+
+        type();
+      </script>
+      <style>
+        .circle-container {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          width: 150px;
+          height: 150px;
+          background-color: #7b0087;
+          /* Background color for the circle container */
+          border-radius: 50%;
+          /* Make the container a circle */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          animation: rotate 10s linear infinite;
+          transform-origin: center;
+        }
+
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+
+        .circular-text {
+          font-size: 16px;
+          /* Increased font size */
+          fill: #fff;
+        }
+
+        @keyframes rotate {
+          from {
+            transform: rotate(0deg);
+          }
+
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+        @keyframes typewriter {
+          from {
+            width: 0;
+          }
+
+          to {
+            width: 100%;
+          }
+        }
+
+        .typewriter-text {
+          overflow: hidden;
+          white-space: nowrap;
+          border-right: 2px solid white;
+          animation: typewriter 4s steps(40) 1s 1 normal both,
+            blinkTextCursor 500ms steps(40) infinite normal;
+        }
+
+        @keyframes blinkTextCursor {
+          from {
+            border-right-color: white;
+          }
+
+          to {
+            border-right-color: transparent;
+          }
+        }
+      </style>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+              } else {
+                entry.target.classList.remove('visible');
+              }
+            });
+          });
+
+          const elements = document.querySelectorAll('.scroll-animation');
+          elements.forEach(element => {
+            observer.observe(element);
+          });
+
+          const elementsLeft = document.querySelectorAll('.scroll-animation-left');
+          elementsLeft.forEach(element => {
+            observer.observe(element);
+          });
+
+
+        });
+      </script>
     </section>
   </div>
 </body>
